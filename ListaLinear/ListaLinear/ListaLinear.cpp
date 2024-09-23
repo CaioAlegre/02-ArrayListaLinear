@@ -88,7 +88,6 @@ void exibirElementos()
 		}
 	}
 }
-
 void inserirElemento()
 {
 	if (nElementos < MAX) {
@@ -105,5 +104,24 @@ void inserirElemento()
 // deve ser implementada como resposta ao exercicio
 void buscarElemento()
 {
+		if (nElementos == 0)
+	{
+		cout << " A lista esta vazia \n";
+		return;
+	}			
+		int numero;
+		cout << "Digite o numero desejado: ";
+		cin >> numero;
 
+		
+		for (int i = 0; i < nElementos; i++)
+		{
+			
+        if (lista[i] == numero) {
+            cout << "Elemento encontrado na posição: " << i << endl;
+            return;
+		}
+		 }
+			cout << "Elemento não encontrado";
+    		
 }
